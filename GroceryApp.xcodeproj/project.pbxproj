@@ -21,6 +21,8 @@
 		F68AF64327388B0100525EC5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F68AF64227388B0100525EC5 /* FirebaseFirestore */; };
 		F68AF64527388B0100525EC5 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = F68AF64427388B0100525EC5 /* FirebaseFirestoreSwift-Beta */; };
 		F68AF647273890F700525EC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F68AF646273890F700525EC5 /* GoogleService-Info.plist */; };
+		F68AF6492738A0CF00525EC5 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68AF6482738A0CF00525EC5 /* Task.swift */; };
+		F68AF64C2738A13C00525EC5 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68AF64B2738A13C00525EC5 /* TaskDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		8DA2743F2543B96600DC6E67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DA274462543B9E000DC6E67 /* GoogleService-Info-azam.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-azam.plist"; sourceTree = "<group>"; };
 		F68AF646273890F700525EC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F68AF6482738A0CF00525EC5 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		F68AF64B2738A13C00525EC5 /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 		8DA274352543B96500DC6E67 /* GroceryApp */ = {
 			isa = PBXGroup;
 			children = (
+				F68AF64A2738A10900525EC5 /* TaskFBTest */,
 				8D411E2B2545D20700D86798 /* Utils */,
 				8D2E9C2D2543BB6600E962D8 /* Managers */,
 				8D2E9C2C2543BB5700E962D8 /* Models */,
@@ -147,6 +152,15 @@
 			children = (
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F68AF64A2738A10900525EC5 /* TaskFBTest */ = {
+			isa = PBXGroup;
+			children = (
+				F68AF6482738A0CF00525EC5 /* Task.swift */,
+				F68AF64B2738A13C00525EC5 /* TaskDetailView.swift */,
+			);
+			path = TaskFBTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +247,8 @@
 			files = (
 				8DA274392543B96500DC6E67 /* ContentView.swift in Sources */,
 				8D2E9C282543BB1600E962D8 /* View+Extensions.swift in Sources */,
+				F68AF64C2738A13C00525EC5 /* TaskDetailView.swift in Sources */,
+				F68AF6492738A0CF00525EC5 /* Task.swift in Sources */,
 				8DA274372543B96500DC6E67 /* GroceryAppApp.swift in Sources */,
 				8D411E2D2545D21700D86798 /* Constants.swift in Sources */,
 			);
