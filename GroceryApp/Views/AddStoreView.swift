@@ -31,7 +31,8 @@ struct AddStoreView: View {
                 // In case there's an error - display the message
                 Text(addStoreVM.message)
             }
-        }.navigationBarItems(leading: Button(action: {
+        }
+        .navigationBarItems(leading: Button(action: {
             presentationMode
                 .wrappedValue.dismiss()
         }, label: {
