@@ -26,6 +26,8 @@
 		F69A232E2739C1E7000FE816 /* TasksContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A232D2739C1E7000FE816 /* TasksContentView.swift */; };
 		F69A23302739C47A000FE816 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A232F2739C47A000FE816 /* Store.swift */; };
 		F69A23322739C4E2000FE816 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A23312739C4E2000FE816 /* FirestoreManager.swift */; };
+		F69A23342739C83F000FE816 /* AddStoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A23332739C83F000FE816 /* AddStoreViewModel.swift */; };
+		F69A23362739CC8D000FE816 /* AddStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A23352739CC8D000FE816 /* AddStoreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		F69A232D2739C1E7000FE816 /* TasksContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksContentView.swift; sourceTree = "<group>"; };
 		F69A232F2739C47A000FE816 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		F69A23312739C4E2000FE816 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		F69A23332739C83F000FE816 /* AddStoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoreViewModel.swift; sourceTree = "<group>"; };
+		F69A23352739CC8D000FE816 /* AddStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 		8D2E9C252543BAEC00E962D8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F69A23352739CC8D000FE816 /* AddStoreView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -81,6 +86,7 @@
 		8D2E9C2B2543BB4E00E962D8 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				F69A23332739C83F000FE816 /* AddStoreViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -258,8 +264,10 @@
 				8D2E9C282543BB1600E962D8 /* View+Extensions.swift in Sources */,
 				F68AF64C2738A13C00525EC5 /* TaskDetailView.swift in Sources */,
 				F69A23302739C47A000FE816 /* Store.swift in Sources */,
+				F69A23342739C83F000FE816 /* AddStoreViewModel.swift in Sources */,
 				F69A232E2739C1E7000FE816 /* TasksContentView.swift in Sources */,
 				F68AF6492738A0CF00525EC5 /* Task.swift in Sources */,
+				F69A23362739CC8D000FE816 /* AddStoreView.swift in Sources */,
 				8DA274372543B96500DC6E67 /* GroceryAppApp.swift in Sources */,
 				F69A23322739C4E2000FE816 /* FirestoreManager.swift in Sources */,
 				8D411E2D2545D21700D86798 /* Constants.swift in Sources */,
