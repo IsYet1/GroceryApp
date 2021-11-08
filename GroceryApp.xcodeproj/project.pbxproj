@@ -23,6 +23,7 @@
 		F68AF647273890F700525EC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F68AF646273890F700525EC5 /* GoogleService-Info.plist */; };
 		F68AF6492738A0CF00525EC5 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68AF6482738A0CF00525EC5 /* Task.swift */; };
 		F68AF64C2738A13C00525EC5 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68AF64B2738A13C00525EC5 /* TaskDetailView.swift */; };
+		F69A232E2739C1E7000FE816 /* TasksContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A232D2739C1E7000FE816 /* TasksContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		F68AF646273890F700525EC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F68AF6482738A0CF00525EC5 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		F68AF64B2738A13C00525EC5 /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
+		F69A232D2739C1E7000FE816 /* TasksContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			children = (
 				F68AF6482738A0CF00525EC5 /* Task.swift */,
 				F68AF64B2738A13C00525EC5 /* TaskDetailView.swift */,
+				F69A232D2739C1E7000FE816 /* TasksContentView.swift */,
 			);
 			path = TaskFBTest;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				8DA274392543B96500DC6E67 /* ContentView.swift in Sources */,
 				8D2E9C282543BB1600E962D8 /* View+Extensions.swift in Sources */,
 				F68AF64C2738A13C00525EC5 /* TaskDetailView.swift in Sources */,
+				F69A232E2739C1E7000FE816 /* TasksContentView.swift in Sources */,
 				F68AF6492738A0CF00525EC5 /* Task.swift in Sources */,
 				8DA274372543B96500DC6E67 /* GroceryAppApp.swift in Sources */,
 				8D411E2D2545D21700D86798 /* Constants.swift in Sources */,
