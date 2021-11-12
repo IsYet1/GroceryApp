@@ -28,6 +28,7 @@
 		F69A23322739C4E2000FE816 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A23312739C4E2000FE816 /* FirestoreManager.swift */; };
 		F69A23342739C83F000FE816 /* AddStoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A23332739C83F000FE816 /* AddStoreViewModel.swift */; };
 		F69A23362739CC8D000FE816 /* AddStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A23352739CC8D000FE816 /* AddStoreView.swift */; };
+		F6E5C572273F2E6300AD2505 /* StoreListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E5C571273F2E6300AD2505 /* StoreListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		F69A23312739C4E2000FE816 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		F69A23332739C83F000FE816 /* AddStoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoreViewModel.swift; sourceTree = "<group>"; };
 		F69A23352739CC8D000FE816 /* AddStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoreView.swift; sourceTree = "<group>"; };
+		F6E5C571273F2E6300AD2505 /* StoreListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				F69A23332739C83F000FE816 /* AddStoreViewModel.swift */,
+				F6E5C571273F2E6300AD2505 /* StoreListViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6E5C572273F2E6300AD2505 /* StoreListViewModel.swift in Sources */,
 				8DA274392543B96500DC6E67 /* ContentView.swift in Sources */,
 				8D2E9C282543BB1600E962D8 /* View+Extensions.swift in Sources */,
 				F68AF64C2738A13C00525EC5 /* TaskDetailView.swift in Sources */,
