@@ -11,4 +11,6 @@ struct Store: Codable {
     var id: String?
     let name: String
     let address: String
+    
+    var items: [String]?
 }
