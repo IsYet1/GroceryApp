@@ -14,6 +14,7 @@
 		8DA2743B2543B96600DC6E67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DA2743A2543B96600DC6E67 /* Assets.xcassets */; };
 		8DA2743E2543B96600DC6E67 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DA2743D2543B96600DC6E67 /* Preview Assets.xcassets */; };
 		8DA274472543B9E000DC6E67 /* GoogleService-Info-azam.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DA274462543B9E000DC6E67 /* GoogleService-Info-azam.plist */; };
+		F60430B0274711A900950532 /* StoreItemsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60430AF274711A900950532 /* StoreItemsListView.swift */; };
 		F6522C6C2741CF6400BEF1D1 /* StoreItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522C6B2741CF6400BEF1D1 /* StoreItemListViewModel.swift */; };
 		F68AF63B27388B0100525EC5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F68AF63A27388B0100525EC5 /* FirebaseAnalytics */; };
 		F68AF63D27388B0100525EC5 /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = F68AF63C27388B0100525EC5 /* FirebaseAnalyticsSwift-Beta */; };
@@ -42,6 +43,7 @@
 		8DA2743D2543B96600DC6E67 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8DA2743F2543B96600DC6E67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DA274462543B9E000DC6E67 /* GoogleService-Info-azam.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-azam.plist"; sourceTree = "<group>"; };
+		F60430AF274711A900950532 /* StoreItemsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemsListView.swift; sourceTree = "<group>"; };
 		F6522C6B2741CF6400BEF1D1 /* StoreItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemListViewModel.swift; sourceTree = "<group>"; };
 		F68AF646273890F700525EC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F68AF6482738A0CF00525EC5 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				F69A23352739CC8D000FE816 /* AddStoreView.swift */,
+				F60430AF274711A900950532 /* StoreItemsListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				F69A232E2739C1E7000FE816 /* TasksContentView.swift in Sources */,
 				F6522C6C2741CF6400BEF1D1 /* StoreItemListViewModel.swift in Sources */,
 				F68AF6492738A0CF00525EC5 /* Task.swift in Sources */,
+				F60430B0274711A900950532 /* StoreItemsListView.swift in Sources */,
 				F69A23362739CC8D000FE816 /* AddStoreView.swift in Sources */,
 				8DA274372543B96500DC6E67 /* GroceryAppApp.swift in Sources */,
 				F69A23322739C4E2000FE816 /* FirestoreManager.swift in Sources */,
