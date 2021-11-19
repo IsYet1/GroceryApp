@@ -5,12 +5,16 @@
 //  Created by Don McKenzie on 11/18/21.
 //
 
+// Multiple ways to handle the page update. Could do onChange like we've done before.
+
 import SwiftUI
+import Combine
 
 struct StoreItemsListView: View {
     
-    let store: StoreViewModel
+    @State var store: StoreViewModel
     @StateObject private var storeItemListVM = StoreItemListViewModel()
+    @State var cancellable: AnyCancellable?
     
     var body: some View {
         VStack {
@@ -24,6 +28,17 @@ struct StoreItemsListView: View {
             List(store.items, id: \.self) {item in
                 Text(item)
             }
+            
+            Spacer()
+            
+            .onAppear(perform: {
+                cancellable = storeItemListVM.$store.sink { value in
+                    if let value = value {
+                        store = value
+                    }
+                    
+                }
+            })
         }
     }
 }
