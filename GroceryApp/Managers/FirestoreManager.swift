@@ -15,6 +15,24 @@ class FirestoreManager {
     init() {
         db = Firestore.firestore()
     }
+    
+    func getStoreById(storeId: String, completion: @escaping (Result<Store?, Error>) -> Void) {
+        let ref = db.collection("stores").document(storeId)
+        ref.getDocument { (snapshot, error) in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                if let snapshot = snapshot {
+                    var store: Store? = try? snapshot.data(as: Store.self)
+                    if store != nil {
+                        store!.id = snapshot.documentID
+                        completion(.success(store))
+                    }
+                }
+            }
+        }
+    }
+    
     func updateStore(storeId: String, values: [AnyHashable: Any], completion: @escaping (Result<Store?, Error>) -> Void) {
         let ref = db.collection("stores").document(storeId)
         ref.updateData(
@@ -25,17 +43,12 @@ class FirestoreManager {
             if let error = error {
                 completion(.failure(error))
             } else {
-                ref.getDocument { (snapshot, error) in
-                    if let error = error {
+                self.getStoreById(storeId: storeId) {result in
+                    switch result {
+                    case .success(let store):
+                        completion(.success(store))
+                    case .failure(let error):
                         completion(.failure(error))
-                    } else {
-                        if let snapshot = snapshot {
-                            var store: Store? = try? snapshot.data(as: Store.self)
-                            if store != nil {
-                                store!.id = snapshot.documentID
-                                completion(.success(store))
-                            }
-                        }
                     }
                 }
             }

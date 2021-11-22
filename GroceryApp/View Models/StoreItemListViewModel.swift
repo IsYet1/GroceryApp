@@ -16,6 +16,21 @@ class StoreItemListViewModel: ObservableObject {
         firestoreManager = FirestoreManager()
     }
     
+    func getStoreById(storeId: String) {
+        firestoreManager.getStoreById(storeId: storeId) { result in
+            switch result {
+            case .success(let store):
+                if let store = store {
+                    DispatchQueue.main.async {
+                        self.store = StoreViewModel(store: store)
+                    }
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
     func addItemsToStore(storeId: String) {
         // Dictionary ["items": item]
         firestoreManager.updateStore(storeId: storeId, values: ["items": [groceryItemName] ] ) {result in
