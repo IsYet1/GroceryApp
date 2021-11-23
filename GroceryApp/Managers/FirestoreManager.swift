@@ -33,6 +33,27 @@ class FirestoreManager {
         }
     }
     
+    func addItemToStore(storeId: String, storeItem: StoreItem, completion: @escaping (Result<Store?, Error>) -> Void) {
+        do {
+            let _ = try db.collection("stores")
+                .document(storeId)
+                // TODO: Try using the storeItem object instead of parsing it out.
+                .collection("items").addDocument(data: ["name": storeItem.name, "price": storeItem.price, "quantity": storeItem.quantity])
+            
+            self.getStoreById(storeId: storeId) { result in
+                switch result{
+                case .success(let store):
+                    completion(.success(store))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+        } catch let error {
+            completion(.failure(error))
+        }
+    }
+    
+    // This is not used after adding the addItemToStore above. He named the functions the same but I used a different name.
     func updateStore(storeId: String, values: [AnyHashable: Any], completion: @escaping (Result<Store?, Error>) -> Void) {
         let ref = db.collection("stores").document(storeId)
         ref.updateData(

@@ -12,3 +12,9 @@ struct StoreItem: Codable {
     var price: Double = 0.0
     var quantity: Int = 0
 }
+
+extension StoreItem {
+    static func from(_ storeItemVS: StoreItemViewState) -> StoreItem {
+        return StoreItem(name: storeItemVS.name, price: Double(storeItemVS.price) ?? 0.0, quantity: Int(storeItemVS.quantity) ?? 0)
+    }
+}

@@ -29,7 +29,8 @@ struct StoreItemsListView: View {
                 .padding()
 
             Button("Save") {
-                storeItemListVM.addItemsToStore(storeId: store.storeId)
+                storeItemListVM.addItemToStore(storeId: store.storeId) {error in
+                }
             }
             if let store = storeItemListVM.store {
                 List(store.items, id: \.self) {item in
