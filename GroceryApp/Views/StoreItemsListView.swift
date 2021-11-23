@@ -29,19 +29,21 @@ struct StoreItemsListView: View {
                 .padding()
 
             Button("Save") {
-                storeItemListVM.addItemToStore(storeId: store.storeId) {error in
+                storeItemListVM.addItemToStore(storeId: store.storeId) { error in
+                    if error == nil {
+                        storeItemListVM.getStoreItemsBy(storeId: store.storeId)
+                    }
                 }
             }
-            if let store = storeItemListVM.store {
-                List(store.items, id: \.self) {item in
-                    Text(item)
-                }
+            List(storeItemListVM.storeItems, id: \.name) {item in
+                Text(item.name)
             }
             
             Spacer()
             
             .onAppear(perform: {
-                storeItemListVM.getStoreById(storeId: store.storeId)
+                storeItemListVM.getStoreItemsBy(storeId: store.storeId)
+//                storeItemListVM.getStoreById(storeId: store.storeId)
             })
         }
     }

@@ -30,6 +30,7 @@ class StoreItemListViewModel: ObservableObject {
     private var firestoreManager: FirestoreManager
     var groceryItemName: String = ""
     @Published var store: StoreViewModel?
+    @Published var storeItems: [StoreItemViewModel] = []
     
     var storeItemVS = StoreItemViewState()
 
@@ -64,6 +65,22 @@ class StoreItemListViewModel: ObservableObject {
         }
     }
     
+    func getStoreItemsBy(storeId: String) {
+        firestoreManager.getStoreItemsBy(storeId: storeId) { result in
+            switch result {
+            case .success(let items):
+                if let items = items {
+                    DispatchQueue.main.async {
+                        self.storeItems = items.map(StoreItemViewModel.init)
+                    }
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    // This isn't being used as of lesson 39
     func addItemsToStore(storeId: String) {
         // Dictionary ["items": item]
         firestoreManager.updateStore(storeId: storeId, values: ["items": [groceryItemName] ] ) {result in

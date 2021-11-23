@@ -16,6 +16,24 @@ class FirestoreManager {
         db = Firestore.firestore()
     }
     
+    func getStoreItemsBy(storeId: String, completion: @escaping (Result<[StoreItem]?, Error>) -> Void) {
+        db.collection("stores")
+            .document(storeId)
+            .collection("items")
+            .getDocuments { (snapshot, error) in
+                if let error = error {
+                    completion(.failure(error))
+                } else {
+                    if let snapshot = snapshot {
+                        let items = snapshot.documents.compactMap { doc in
+                            try? doc.data(as: StoreItem.self)
+                        }
+                        completion(.success((items)))
+                    }
+                }
+            }
+    }
+    
     func getStoreById(storeId: String, completion: @escaping (Result<Store?, Error>) -> Void) {
         let ref = db.collection("stores").document(storeId)
         ref.getDocument { (snapshot, error) in
