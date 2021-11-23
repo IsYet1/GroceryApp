@@ -7,11 +7,32 @@
 
 import Foundation
 
+struct StoreItemViewState {
+    var name: String = ""
+    var price: String = ""
+    var quantity: String = ""
+}
+
+struct StoreItemViewModel {
+    let storeItem: StoreItem
+    var name: String {
+        storeItem.name
+    }
+    var price: Double {
+        storeItem.price
+    }
+    var quantity: Int {
+        storeItem.quantity
+    }
+}
+
 class StoreItemListViewModel: ObservableObject {
     private var firestoreManager: FirestoreManager
     var groceryItemName: String = ""
     @Published var store: StoreViewModel?
     
+    var storeItemVS = StoreItemViewState()
+
     init() {
         firestoreManager = FirestoreManager()
     }

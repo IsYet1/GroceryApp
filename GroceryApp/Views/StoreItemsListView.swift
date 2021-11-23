@@ -16,9 +16,18 @@ struct StoreItemsListView: View {
     
     var body: some View {
         VStack {
-            TextField("Enter item name", text: $storeItemListVM.groceryItemName)
+            TextField("Enter item name", text: $storeItemListVM.storeItemVS.name)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
+
+            TextField("Price", text: $storeItemListVM.storeItemVS.price)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+
+            TextField("Quantity", text: $storeItemListVM.storeItemVS.quantity)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+
             Button("Save") {
                 storeItemListVM.addItemsToStore(storeId: store.storeId)
             }
