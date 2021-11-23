@@ -14,6 +14,8 @@ struct StoreItemsListView: View {
     var store: StoreViewModel
     @StateObject private var storeItemListVM = StoreItemListViewModel()
     
+    @State private var storeItemVS = StoreItemViewState()
+    
     private func deleteStoreItem(at indexSet: IndexSet) {
         indexSet.forEach { index in
             let storeItem = storeItemListVM.storeItems[index]
@@ -23,21 +25,22 @@ struct StoreItemsListView: View {
     
     var body: some View {
         VStack {
-            TextField("Enter item name", text: $storeItemListVM.storeItemVS.name)
+            TextField("Enter item name", text: $storeItemVS.name)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
 
-            TextField("Price", text: $storeItemListVM.storeItemVS.price)
+            TextField("Price", text: $storeItemVS.price)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
 
-            TextField("Quantity", text: $storeItemListVM.storeItemVS.quantity)
+            TextField("Quantity", text: $storeItemVS.quantity)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
 
             Button("Save") {
-                storeItemListVM.addItemToStore(storeId: store.storeId) { error in
+                storeItemListVM.addItemToStore(storeId: store.storeId, storeItemVS: storeItemVS) { error in
                     if error == nil {
+                        storeItemVS = StoreItemViewState()
                         storeItemListVM.getStoreItemsBy(storeId: store.storeId)
                     }
                 }

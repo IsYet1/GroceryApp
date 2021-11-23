@@ -35,7 +35,7 @@ class StoreItemListViewModel: ObservableObject {
     @Published var store: StoreViewModel?
     @Published var storeItems: [StoreItemViewModel] = []
     
-    var storeItemVS = StoreItemViewState()
+//    var storeItemVS = StoreItemViewState()
 
     init() {
         firestoreManager = FirestoreManager()
@@ -66,7 +66,7 @@ class StoreItemListViewModel: ObservableObject {
         }
     }
     
-    func addItemToStore(storeId: String, completion: @escaping (Error?) -> Void) {
+    func addItemToStore(storeId: String, storeItemVS: StoreItemViewState, completion: @escaping (Error?) -> Void) {
         let storeItem = StoreItem.from(storeItemVS)
         firestoreManager.addItemToStore(storeId: storeId, storeItem: storeItem) { result in
             switch result {
