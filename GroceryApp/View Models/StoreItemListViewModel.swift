@@ -15,6 +15,9 @@ struct StoreItemViewState {
 
 struct StoreItemViewModel {
     let storeItem: StoreItem
+    var storeItemId: String {
+        storeItem.id ?? ""
+    }
     var name: String {
         storeItem.name
     }
@@ -36,6 +39,16 @@ class StoreItemListViewModel: ObservableObject {
 
     init() {
         firestoreManager = FirestoreManager()
+    }
+    
+    // TODO: Verify this completion syntax works. It's suggested by the intellisense but not the syntax we've been using.
+    func deleteStoreItem(storeId: String, storeItemId: String) {
+        firestoreManager.deleteStoreItem(storeId: storeId, storeItemId: storeItemId, completion: {
+            error in
+            if error == nil {
+                self.getStoreItemsBy(storeId: storeId)
+            }
+        })
     }
     
     func getStoreById(storeId: String) {

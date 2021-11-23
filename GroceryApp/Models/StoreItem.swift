@@ -8,6 +8,7 @@
 import Foundation
 
 struct StoreItem: Codable {
+    var id: String?
     var name: String = ""
     var price: Double = 0.0
     var quantity: Int = 0

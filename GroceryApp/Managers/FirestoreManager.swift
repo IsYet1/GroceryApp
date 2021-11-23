@@ -16,6 +16,17 @@ class FirestoreManager {
         db = Firestore.firestore()
     }
     
+    // Only one item in the completion handler so no completion(.failure) or (.success)
+    func deleteStoreItem(storeId: String, storeItemId: String, completion: @escaping (Error?) -> Void) {
+        db.collection("stores")
+            .document(storeId)
+            .collection("items")
+            .document(storeItemId)
+            .delete { (error) in
+                completion(error)
+            }
+    }
+    
     func getStoreItemsBy(storeId: String, completion: @escaping (Result<[StoreItem]?, Error>) -> Void) {
         db.collection("stores")
             .document(storeId)
@@ -25,8 +36,10 @@ class FirestoreManager {
                     completion(.failure(error))
                 } else {
                     if let snapshot = snapshot {
-                        let items = snapshot.documents.compactMap { doc in
-                            try? doc.data(as: StoreItem.self)
+                        let items: [StoreItem]? = snapshot.documents.compactMap { doc in
+                            var storeItem = try? doc.data(as: StoreItem.self)
+                            storeItem?.id = doc.documentID
+                            return storeItem
                         }
                         completion(.success((items)))
                     }

@@ -14,6 +14,13 @@ struct StoreItemsListView: View {
     var store: StoreViewModel
     @StateObject private var storeItemListVM = StoreItemListViewModel()
     
+    private func deleteStoreItem(at indexSet: IndexSet) {
+        indexSet.forEach { index in
+            let storeItem = storeItemListVM.storeItems[index]
+            storeItemListVM.deleteStoreItem(storeId: store.storeId, storeItemId: storeItem.storeItemId)
+        }
+    }
+    
     var body: some View {
         VStack {
             TextField("Enter item name", text: $storeItemListVM.storeItemVS.name)
@@ -35,8 +42,10 @@ struct StoreItemsListView: View {
                     }
                 }
             }
-            List(storeItemListVM.storeItems, id: \.name) {item in
-                Text(item.name)
+            List {
+                ForEach(storeItemListVM.storeItems, id: \.storeItemId) { storeItem in
+                    Text(storeItem.name)
+                }.onDelete(perform: deleteStoreItem)
             }
             
             Spacer()
