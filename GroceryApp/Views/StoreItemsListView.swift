@@ -61,7 +61,8 @@ struct StoreItemsListView: View {
                         Text(String(storeItem.quantity))
                     }
 
-                }.onDelete(perform: deleteStoreItem)
+                }
+                .onDelete(perform: deleteStoreItem)
             }
             
             Spacer()

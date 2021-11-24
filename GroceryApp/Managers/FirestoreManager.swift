@@ -18,6 +18,8 @@ class FirestoreManager {
     
     // Only one item in the completion handler so no completion(.failure) or (.success)
     func deleteStoreItem(storeId: String, storeItemId: String, completion: @escaping (Error?) -> Void) {
+        print("Deleting")
+        debugPrint("Deleting debug")
         db.collection("stores")
             .document(storeId)
             .collection("items")
