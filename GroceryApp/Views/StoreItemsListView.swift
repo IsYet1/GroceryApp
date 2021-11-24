@@ -25,6 +25,12 @@ struct StoreItemsListView: View {
     
     var body: some View {
         VStack {
+            HStack {
+                StoreCell(store: store).frame(alignment: .leading)
+                Spacer()
+            }
+            .frame(alignment: .leading)
+            .padding()
             TextField("Enter item name", text: $storeItemVS.name)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()

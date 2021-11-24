@@ -52,14 +52,3 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 
-struct StoreCell: View {
-    let store: StoreViewModel
-    var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text(store.name)
-                .font(.headline)
-            Text(store.address)
-                .font(.body)
-        }
-    }
-}

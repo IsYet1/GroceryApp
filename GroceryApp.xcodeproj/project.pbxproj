@@ -15,6 +15,7 @@
 		8DA2743E2543B96600DC6E67 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DA2743D2543B96600DC6E67 /* Preview Assets.xcassets */; };
 		8DA274472543B9E000DC6E67 /* GoogleService-Info-azam.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DA274462543B9E000DC6E67 /* GoogleService-Info-azam.plist */; };
 		F60430B0274711A900950532 /* StoreItemsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60430AF274711A900950532 /* StoreItemsListView.swift */; };
+		F6090CD7274E9DBF007393F3 /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6090CD6274E9DBE007393F3 /* StoreCell.swift */; };
 		F6522C6C2741CF6400BEF1D1 /* StoreItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522C6B2741CF6400BEF1D1 /* StoreItemListViewModel.swift */; };
 		F671F8E7274C66A900B8C68A /* StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F671F8E6274C66A900B8C68A /* StoreItem.swift */; };
 		F68AF63B27388B0100525EC5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F68AF63A27388B0100525EC5 /* FirebaseAnalytics */; };
@@ -45,6 +46,7 @@
 		8DA2743F2543B96600DC6E67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DA274462543B9E000DC6E67 /* GoogleService-Info-azam.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-azam.plist"; sourceTree = "<group>"; };
 		F60430AF274711A900950532 /* StoreItemsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemsListView.swift; sourceTree = "<group>"; };
+		F6090CD6274E9DBE007393F3 /* StoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
 		F6522C6B2741CF6400BEF1D1 /* StoreItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemListViewModel.swift; sourceTree = "<group>"; };
 		F671F8E6274C66A900B8C68A /* StoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItem.swift; sourceTree = "<group>"; };
 		F68AF646273890F700525EC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			children = (
 				F69A23352739CC8D000FE816 /* AddStoreView.swift */,
 				F60430AF274711A900950532 /* StoreItemsListView.swift */,
+				F6090CD6274E9DBE007393F3 /* StoreCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				F69A23302739C47A000FE816 /* Store.swift in Sources */,
 				F69A23342739C83F000FE816 /* AddStoreViewModel.swift in Sources */,
 				F671F8E7274C66A900B8C68A /* StoreItem.swift in Sources */,
+				F6090CD7274E9DBF007393F3 /* StoreCell.swift in Sources */,
 				F69A232E2739C1E7000FE816 /* TasksContentView.swift in Sources */,
 				F6522C6C2741CF6400BEF1D1 /* StoreItemListViewModel.swift in Sources */,
 				F68AF6492738A0CF00525EC5 /* Task.swift in Sources */,
