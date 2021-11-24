@@ -53,18 +53,15 @@ struct StoreItemsListView: View {
             }
             
             List {
-                ScrollView {
-                    ForEach(storeItemListVM.storeItems, id: \.storeItemId) { storeItem in
-                        LazyVGrid(columns: Array(repeating: .init(.adaptive(minimum: 120)), count: 3)) {
-                            
-                            Text(storeItem.name)
-                            Text(String(storeItem.price))
-                            Text(String(storeItem.quantity))
-                        }
+                ForEach(storeItemListVM.storeItems, id: \.storeItemId) { storeItem in
+                    LazyVGrid(columns: Array(repeating: .init(.adaptive(minimum: 120)), count: 3)) {
                         
-                        
-                    }.onDelete(perform: deleteStoreItem)
-                }
+                        Text(storeItem.name)
+                        Text(String(storeItem.price))
+                        Text(String(storeItem.quantity))
+                    }
+
+                }.onDelete(perform: deleteStoreItem)
             }
             
             Spacer()
